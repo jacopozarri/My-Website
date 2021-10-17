@@ -38,15 +38,12 @@
       width: 80px;
     }
 
-    address {
-      font: bold 20px Verdana, sans-serif;
-      margin: 30px auto auto;
-    }
-
-    #mail {
+    a {
       color: #164dc5;
+      display: block;
       font: 15px Verdana, sans-serif;
       margin: 15px auto auto 15px;
+      text-decoration: none;
     }
 
     main {
@@ -129,6 +126,14 @@
       color: #164dc5;
       margin: 35px 15px 0;
     }
+
+    #mail {
+      color: white;
+      font: bold 20px Verdana, sans-serif;
+      margin: 30px auto auto;
+      
+    }
+
   </style>
   <script>
     window.onload = function () {
@@ -198,7 +203,7 @@
 <body>
   <div class="animate">
     <button>Dark Theme</button>
-    <address id="mail">info@jacopozarri.com</address>
+    <a href="mailto:info@jacopozarri.com">info@jacopozarri.com</a>
   </div>
   <main>
     <h1 class="animate">Front-End Web Developer</h1>
@@ -206,7 +211,7 @@
       I code beautifully simple things, and make them accessible to everyone.
     </p>
     <img alt="Myself" id="myself" src="mac.png" />
-    <img alt="Networks" id="networks" src="networks.png" height="750px" />
+    <img alt="Networks" height="750px" id="networks" src="networks.png"  />
     <section>
       <h2 class="slide">Hi, I’m Jacopo. Nice to meet you.</h2>
       <p class="slide">
@@ -228,7 +233,7 @@
         I’m always open to discussing work or partnership opportunities. Send
         me an e-mail I’m excited to learn about your project.
       </p>
-      <address class="slide">info@jacopozarri.com</address>
+      <a class=slide href="mailto:info@jacopozarri.com" id="mail" >info@jacopozarri.com</a>
     </section>
   </main>
 </body>

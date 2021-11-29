@@ -1,242 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>Jacopo Zarri</title>
-  <link href="logo.png" rel="icon" type="image/png" />
-  <style>
-    body {
-      font: 20px Verdana, sans-serif;
-      margin: 0;
-    }
-
-    .animate {
-      animation: slide-down 1.5s;
-    }
-
-    @keyframes slide-down {
-      0% {
-        transform: translateY(-700%);
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Jacopo Zarri</title>
+    <link href="logo.png" rel="icon" type="image/png" />
+    <style>
+      body {
+        font: 20px Verdana, sans-serif;
+        margin: 0;
       }
-
-      100% {
-        transform: translateY(0);
+      button {
+        background: #fff;
+        border: 2px solid #164dc5;
+        border-radius: 25px;
+        color: #000;
+        cursor: pointer;
+        float: right;
+        font: 0.5em Verdana, sans-serif;
+        margin: auto 15px 0;
+        padding: 5px;
+        width: 80px;
       }
-    }
-
-    button {
-      background: #fff;
-      border: 2px solid #164dc5;
-      border-radius: 25px;
-      color: black;
-      cursor: pointer;
-      float: right;
-      font: 0.5em Verdana, sans-serif;
-      margin: auto 15px 0;
-      padding: 5px;
-      width: 80px;
-    }
-
-    a {
-      color: #164dc5;
-      display: block;
-      font: 15px Verdana, sans-serif;
-      margin: 15px auto auto 15px;
-      text-decoration: none;
-    }
-
-    main {
-      margin: 60px auto 0;
-      text-align: center;
-    }
-
-    .leftslide {
-      animation: slide-left 1.5s;
-      visibility: visible !important;
-    }
-
-    @keyframes slide-left {
-      0% {
-        transform: translateX(100%);
+      a {
+        color: #164dc5;
+        display: block;
+        font: 15px Verdana, sans-serif;
+        margin: 15px auto auto 15px;
+        text-decoration: none;
       }
-
-      100% {
-        transform: translateX(0);
+      main {
+        margin: 60px auto 0;
+        text-align: center;
       }
-    }
+      .leftslide {
+        animation: slide-left 1.5s;
+        visibility: visible !important;
+      }
+      @keyframes slide-left {
+        0% {
+          transform: translateX(100%);
+        }
 
-    h1 {
-      font: bold 40px Verdana, sans-serif;
-      margin: 30px 15px 0;
-    }
-
-    p {
-      line-height: 30px;
-      margin: 25px 25px 0;
-    }
-
-    img {
-      display: block;
-      margin: 20px auto 0;
-    }
-
-    #myself {
-      cursor: pointer;
-      max-width: 180px;
-      width: 30%;
-    }
-
-    #networks {
-      max-width: 750px;
-      width: 100%;
-    }
-
-    section {
-      background: #164dc5;
-      color: white;
-      margin: 0 auto;
-      padding: 15px 0 60px;
-    }
-
-    h2 {
-      font: bold 30px Verdana, sans-serif;
-      margin: 30px auto auto;
-    }
-
-    #box {
-      background: white;
-      border-radius: 15px;
-      color: black;
-      margin: 65px 25px 40px;
-      padding: 5px 0 50px;
-    }
-
-    #devices {
-      max-width: 200px;
-      width: 45%;
-    }
-
-    h3 {
-      font: bold 30px Verdana, sans-serif;
-      margin: 0 auto auto;
-    }
-
-    #text {
-      color: #164dc5;
-      margin: 35px 15px 0;
-    }
-
-    #mail {
-      color: white;
-      font: bold 20px Verdana, sans-serif;
-      margin: 30px auto auto;
-      
-    }
-
-  </style>
-  <script>
-    window.onload = function () {
-      let flip = true;
-      let flip2 = true;
-      let slide = document.querySelectorAll(".slide");
-      const observer = new IntersectionObserver(function (see) {
-        see.forEach(function (seen) {
-          if (seen.isIntersecting) {
-            seen.target.classList.add("leftslide");
-          }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      h1 {
+        font: bold 40px Verdana, sans-serif;
+        margin: 30px 15px 0;
+      }
+      p {
+        line-height: 30px;
+        margin: 25px 25px 0;
+      }
+      img {
+        display: block;
+        margin: 20px auto 0;
+      }
+      #myself {
+        cursor: pointer;
+        max-width: 180px;
+        width: 30%;
+      }
+      #networks {
+        max-width: 750px;
+        width: 100%;
+      }
+      section {
+        background: #164dc5;
+        color: #fff;
+        margin: 0 auto;
+        padding: 15px 0 60px;
+      }
+      h2 {
+        font: bold 30px Verdana, sans-serif;
+        margin: 30px auto auto;
+      }
+      #box {
+        background: #fff;
+        border-radius: 15px;
+        color: #000;
+        margin: 65px 25px 40px;
+        padding: 5px 0 50px;
+      }
+      #devices {
+        max-width: 200px;
+        width: 45%;
+      }
+      h3 {
+        font: bold 30px Verdana, sans-serif;
+        margin: 0 auto auto;
+      }
+      #text {
+        color: #164dc5;
+        margin: 35px 15px 0;
+      }
+      #mail {
+        color: #fff;
+        margin: 30px auto auto;
+        font: bold 20px Verdana, sans-serif;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        let flip = true;
+        let flip2 = true;
+        let slide = document.querySelectorAll(".slide");
+        const observer = new IntersectionObserver(function(see) {
+          see.forEach(function(seen) {
+            if (seen.isIntersecting) {
+              seen.target.classList.add("leftslide");
+            }
+          });
         });
-      });
-      slide.forEach(function (slide) {
-        observer.observe(slide);
-      });
-      slide.forEach(function (slide) {
-        slide.style.visibility = "hidden";
-      });
-      document.querySelector("#networks").style.height = "auto";
-      setTimeout(function () {
-        document.querySelector("img").src = "myself.png";
-        flip = !flip;
-      }, 1500);
-      document.querySelector("img").addEventListener("click", function () {
-        if (flip) {
+        slide.forEach(function(slide) {
+          observer.observe(slide);
+        });
+        slide.forEach(function(slide) {
+          slide.style.visibility = "hidden";
+        });
+        document.querySelector("#networks").style.height = "auto";
+        setTimeout(function() {
           document.querySelector("img").src = "myself.png";
-        } else {
-          document.querySelector("img").src = "mac.png";
-        }
-        flip = !flip;
-      });
-      document.querySelector("button").addEventListener("click", function () {
-        if (flip2) {
-          document.body.style.color = "#fff";
-          document.body.style.background = "#000";
-          document.querySelector("button").innerHTML = "Light Theme";
-          document.querySelector("button").style.borderColor = "#6c95ef";
-          document.querySelector("button").style.color = "#fff";
-          document.querySelector("button").style.background = "#000";
-          document.querySelector("section").style.color = "#000";
-          document.querySelector("section").style.background = "#6c95ef";
-          document.querySelector("#box").style.color = "#fff";
-          document.querySelector("#box").style.background = "#000";
-          document.querySelector("#mail").style.color = "#6c95ef";
-          document.querySelector("#text").style.color = "#6c95ef";
-        } else {
-          document.body.style.color = "";
-          document.body.style.background = "";
-          document.querySelector("button").innerHTML = "Dark Theme";
-          document.querySelector("button").style.borderColor = "";
-          document.querySelector("button").style.color = "";
-          document.querySelector("button").style.background = "";
-          document.querySelector("section").style.color = "";
-          document.querySelector("section").style.background = "";
-          document.querySelector("#box").style.color = "";
-          document.querySelector("#box").style.background = "";
-          document.querySelector("#mail").style.color = "";
-          document.querySelector("#text").style.color = "";
-        }
-        flip2 = !flip2;
-      });
-    };
-  </script>
-</head>
-
-<body>
-  <div class="animate">
-    <button>Dark Theme</button>
-    <a href="mailto:info@jacopozarri.com">info@jacopozarri.com</a>
-  </div>
-  <main>
-    <h1 class="animate">Front-End Web Developer</h1>
-    <p class="animate">
-      I code beautifully simple things, and make them accessible to everyone.
-    </p>
-    <img alt="Myself" id="myself" src="mac.png" />
-    <img alt="Networks" height="750px" id="networks" src="networks.png"  />
-    <section>
-      <h2 class="slide">Hi, I’m Jacopo. Nice to meet you.</h2>
-      <p class="slide">
-        I love science, always keeping myself updated with new technolgies I
-        like to put all my creativity and attention to details to realize
-        simple and beautiful websites, adaptable to all types of devices and
-        accessible to everyone.
+          flip = !flip;
+        }, 1500);
+        document.querySelector("img").addEventListener("click", function() {
+          if (flip) {
+            document.querySelector("img").src = "myself.png";
+          } else {
+            document.querySelector("img").src = "mac.png";
+          }
+          flip = !flip;
+        });
+        document.querySelector("button").addEventListener("click", function() {
+          if (flip2) {
+            document.body.style.color = "#fff";
+            document.body.style.background = "#000";
+            document.querySelector("a").style.color = "#6c95ef";
+            document.querySelector("button").innerHTML = "Light Theme";
+            document.querySelector("button").style.borderColor = "#6c95ef";
+            document.querySelector("button").style.color = "#fff";
+            document.querySelector("button").style.background = "#000";
+            document.querySelector("section").style.color = "#000";
+            document.querySelector("section").style.background = "#6c95ef";
+            document.querySelector("#box").style.color = "#fff";
+            document.querySelector("#box").style.background = "#000";
+            document.querySelector("#text").style.color = "#6c95ef";
+            document.querySelector("#mail").style.color = "#000";
+          } else {
+            document.body.style.color = "";
+            document.body.style.background = "";
+            document.querySelector("a").style.color = "";
+            document.querySelector("button").innerHTML = "Dark Theme";
+            document.querySelector("button").style.borderColor = "";
+            document.querySelector("button").style.color = "";
+            document.querySelector("button").style.background = "";
+            document.querySelector("section").style.color = "";
+            document.querySelector("section").style.background = "";
+            document.querySelector("#box").style.color = "";
+            document.querySelector("#box").style.background = "";
+            document.querySelector("#text").style.color = "";
+            document.querySelector("#mail").style.color = "";
+          }
+          flip2 = !flip2;
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div class="leftslide">
+      <button>Dark Theme</button>
+      <a href="mailto:info@jacopozarri.com">info@jacopozarri.com</a>
+    </div>
+    <main>
+      <h1 class="leftslide">Front-End Web Developer</h1>
+      <p class="leftslide">
+        I code beautifully simple things, and make them accessible to everyone.
       </p>
-      <div id="box">
-        <img alt="Devices" id="devices" src="devices.png" />
-        <h3 class="slide">What I do?</h3>
+      <img alt="Myself" id="myself" src="mac.png" />
+      <img alt="Networks" height="750px" id="networks" src="networks.png" />
+      <section>
+        <h2 class="slide">Hi, I’m Jacopo. Nice to meet you.</h2>
         <p class="slide">
-          I like to code things from scratch, I value simple and responsive
-          design, clean and intuitive UI/UX, SEO and accessibilty.
+          I love science, always keeping myself updated with new technolgies I
+          like to put all my creativity and attention to details to realize
+          simple and beautiful websites, adaptable to all types of devices and
+          accessible to everyone.
         </p>
-        <p class="slide" id="text">HTML - CSS - JavaScript</p>
-      </div>
-      <p class="slide">
-        I’m always open to discussing work or partnership opportunities. Send
-        me an e-mail I’m excited to learn about your project.
-      </p>
-      <a class=slide href="mailto:info@jacopozarri.com" id="mail" >info@jacopozarri.com</a>
-    </section>
-  </main>
-</body>
-
+        <div id="box">
+          <img alt="Devices" id="devices" src="devices.png" />
+          <h3 class="slide">What I do?</h3>
+          <p class="slide">
+            I like to code things from scratch, I value simple and responsive
+            design, clean and intuitive UI/UX, SEO and accessibilty.
+          </p>
+          <p class="slide" id="text">HTML - CSS - JavaScript</p>
+        </div>
+        <p class="slide">
+          I’m always open to discussing work or partnership opportunities. Send
+          me a mail I’m excited to learn about your projects!
+        </p>
+        <a class="slide" href="mailto:info@jacopozarri.com" id="mail">
+          info@jacopozarri.com
+        </a>
+      </section>
+    </main>
+  </body>
 </html>

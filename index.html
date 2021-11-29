@@ -11,10 +11,10 @@
         margin: 0;
       }
       button {
-        background: #fff;
-        border: 2px solid #164dc5;
+        background: #164dc5;
+        border: 0;
         border-radius: 25px;
-        color: #000;
+        color: #fff;
         cursor: pointer;
         float: right;
         font: 0.5em Verdana, sans-serif;
@@ -139,9 +139,8 @@
             document.body.style.background = "#000";
             document.querySelector("a").style.color = "#6c95ef";
             document.querySelector("button").innerHTML = "Light Theme";
-            document.querySelector("button").style.borderColor = "#6c95ef";
-            document.querySelector("button").style.color = "#fff";
-            document.querySelector("button").style.background = "#000";
+            document.querySelector("button").style.color = "#000";
+            document.querySelector("button").style.background = "#6c95ef";
             document.querySelector("section").style.color = "#000";
             document.querySelector("section").style.background = "#6c95ef";
             document.querySelector("#box").style.color = "#fff";
@@ -153,7 +152,6 @@
             document.body.style.background = "";
             document.querySelector("a").style.color = "";
             document.querySelector("button").innerHTML = "Dark Theme";
-            document.querySelector("button").style.borderColor = "";
             document.querySelector("button").style.color = "";
             document.querySelector("button").style.background = "";
             document.querySelector("section").style.color = "";
